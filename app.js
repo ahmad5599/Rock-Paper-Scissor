@@ -92,10 +92,16 @@ function emoji() {
   ];
   return emojis[Math.floor(Math.random() * emojis.length)];
 }
-function removeGlow(user) {
-  document.getElementById(user).classList.remove("graw-glow");
-  document.getElementById(user).classList.remove("red-glow");
-  document.getElementById(user).classList.remove("green-glow");
+function removeGlow() {
+  document.getElementById("r").classList.remove("graw-glow");
+  document.getElementById("r").classList.remove("red-glow");
+  document.getElementById("r").classList.remove("green-glow");
+  document.getElementById("p").classList.remove("graw-glow");
+  document.getElementById("p").classList.remove("red-glow");
+  document.getElementById("p").classList.remove("green-glow");
+  document.getElementById("s").classList.remove("graw-glow");
+  document.getElementById("s").classList.remove("red-glow");
+  document.getElementById("s").classList.remove("green-glow");
 }
 //////////////################////////////
 function win(user, comp) {
@@ -148,14 +154,17 @@ function game(userChoice) {
 ////////////////##############///////////////
 function main() {
   rock_div.addEventListener("click", function () {
+    removeGlow();
     game("r");
   });
 
   paper_div.addEventListener("click", function () {
+    removeGlow();
     game("p");
   });
 
   scissor_div.addEventListener("click", function () {
+    removeGlow();
     game("s");
   });
 }
